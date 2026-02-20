@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <style>
-        /* Eliminamos márgenes y ponemos el fondo negro para que no parpadee en blanco */
         body, html { 
             margin: 0; 
             padding: 0; 
@@ -11,7 +11,6 @@
             overflow: hidden; 
             background-color: #000; 
         }
-        /* Forzamos a la imagen a ocupar todo el espacio */
         img { 
             width: 100vw; 
             height: 100vh; 
@@ -23,7 +22,7 @@
 <body>
     <img id="display">
     <script>
-        // Usamos los enlaces RAW de GitHub para saltarnos la interfaz web
+        // Enlaces directos (RAW) para evitar la interfaz de GitHub
         var fotos = [
             "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/main/castillo.jpeg",
             "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/main/ciudad.jpeg",
@@ -33,8 +32,8 @@
             "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/main/pilares.jpeg"
         ];
         
-        // Elegimos la foto y la ponemos directamente
-        document.getElementById('display').src = fotos[Math.floor(Math.random() * fotos.length)];
+        var imgElement = document.getElementById('display');
+        imgElement.src = fotos[Math.floor(Math.random() * fotos.length)];
     </script>
 </body>
 </html>
