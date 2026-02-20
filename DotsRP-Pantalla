@@ -3,26 +3,21 @@
 <head>
     <meta charset="utf-8">
     <style>
+        /* Fondo negro para evitar el parpadeo blanco que ves en las capturas */
         body, html { 
-            margin: 0; 
-            padding: 0; 
-            width: 100%; 
-            height: 100%; 
-            overflow: hidden; 
-            background-color: #000; 
+            margin: 0; padding: 0; width: 100%; height: 100%; 
+            overflow: hidden; background-color: #000; 
         }
         img { 
-            width: 100vw; 
-            height: 100vh; 
-            object-fit: cover; 
+            width: 100vw; height: 100vh; object-fit: cover; 
             display: block;
         }
     </style>
 </head>
 <body>
-    <img id="display">
+    <img id="display" src="">
     <script>
-        // Enlaces directos (RAW) para evitar la interfaz de GitHub
+        // Enlaces RAW directos para que el navegador no abra la web de GitHub
         var fotos = [
             "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/main/castillo.jpeg",
             "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/main/ciudad.jpeg",
@@ -32,8 +27,9 @@
             "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/main/pilares.jpeg"
         ];
         
-        var imgElement = document.getElementById('display');
-        imgElement.src = fotos[Math.floor(Math.random() * fotos.length)];
+        // Selección aleatoria e inserción inmediata
+        var chosen = fotos[Math.floor(Math.random() * fotos.length)];
+        document.getElementById('display').src = chosen;
     </script>
 </body>
 </html>
