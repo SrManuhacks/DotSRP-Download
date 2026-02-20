@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DotSRP Loading Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        #loading-image {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Ajusta la imagen sin deformarla */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <img id="loading-image" src="" />
+
+    <script type="text/javascript">
+        // Lista de tus imágenes de GitHub en formato RAW
+        var images = [
+            "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/4aab7b1781e74f0bfc3e5e7f996f7f0820008c61/castillo.jpeg",
+            "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/4aab7b1781e74f0bfc3e5e7f996f7f0820008c61/ciudad.jpeg",
+            "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/4aab7b1781e74f0bfc3e5e7f996f7f0820008c61/criba.jpeg",
+            "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/4aab7b1781e74f0bfc3e5e7f996f7f0820008c61/espaldas.jpeg",
+            "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/4aab7b1781e74f0bfc3e5e7f996f7f0820008c61/luna.jpeg",
+            "https://raw.githubusercontent.com/SrManuhacks/DotSRP-Download/4aab7b1781e74f0bfc3e5e7f996f7f0820008c61/pilares.jpeg"
+        ];
+
+        // Función para elegir una imagen aleatoria
+        function randomImage() {
+            var randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById('loading-image').src = images[randomIndex];
+        }
+
+        // Ejecutar la función al cargar la página
+        randomImage();
+    </script>
+</body>
+</html>
